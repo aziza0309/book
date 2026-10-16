@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Доставка — BookHaven</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="navbar">
+      <a href="index.html" class="logo">📖 BookHaven</a>
+      <ul class="nav-links">
+        <li><a href="index.html" data-i18n="nav_home">📚 Каталог</a></li>
+        <li><a href="delivery.html" class="active" data-i18n="nav_delivery">🚚 Доставка</a></li>
+        <li><a href="location.html" data-i18n="nav_location">📍 Где мы</a></li>
+        <li><a href="favorites.html"><span data-i18n="nav_fav">❤️ Лайки</span> <span class="badge" id="favBadge">0</span></a></li>
+        <li><a href="cart.html"><span data-i18n="nav_cart">🛒 Корзина</span> <span class="badge" id="cartBadge">0</span></a></li>
+        <li><a href="account.html" data-i18n="nav_acc">👤 Аккаунт</a></li>
+      </ul>
+      <div class="controls">
+        <select id="langSelect" class="lang-select">
+          <option value="ru">🇷🇺 RU</option>
+          <option value="uz">🇺🇿 UZ</option>
+          <option value="en">🇬🇧 EN</option>
+        </select>
+        <button id="themeBtn" class="theme-btn" data-i18n="theme_btn">🌗 Тема</button>
+        <div class="color-picker-wrapper">
+          <span data-i18n="bg_label">🎨 Фон:</span>
+          <input type="color" id="bgPicker" value="#f8fafc">
+          <button id="resetBgBtn" style="border:none; background:none; cursor:pointer; color:var(--primary); font-weight:bold;" data-i18n="reset_bg">Сброс</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="info-card">
+      <h2 data-i18n="delivery_title" style="margin-bottom: 20px;">🚚 Условия доставки</h2>
+      <p data-i18n="delivery_text1" style="font-size: 18px; margin-bottom: 12px;"></p>
+      <p data-i18n="delivery_text2" style="font-size: 18px; margin-bottom: 12px;"></p>
+      <p data-i18n="delivery_text3" style="font-size: 18px; font-weight: bold; color: var(--primary);"></p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 BookHaven — Современный книжный магазин.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

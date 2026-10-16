@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Аккаунт — BookHaven</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="navbar">
+      <a href="index.html" class="logo">📖 BookHaven</a>
+      <ul class="nav-links">
+        <li><a href="index.html" data-i18n="nav_home">📚 Каталог</a></li>
+        <li><a href="delivery.html" data-i18n="nav_delivery">🚚 Доставка</a></li>
+        <li><a href="location.html" data-i18n="nav_location">📍 Где мы</a></li>
+        <li><a href="favorites.html"><span data-i18n="nav_fav">❤️ Лайки</span> <span class="badge" id="favBadge">0</span></a></li>
+        <li><a href="cart.html"><span data-i18n="nav_cart">🛒 Корзина</span> <span class="badge" id="cartBadge">0</span></a></li>
+        <li><a href="account.html" class="active" data-i18n="nav_acc">👤 Аккаунт</a></li>
+      </ul>
+      <div class="controls">
+        <select id="langSelect" class="lang-select">
+          <option value="ru">🇷🇺 RU</option>
+          <option value="uz">🇺🇿 UZ</option>
+          <option value="en">🇬🇧 EN</option>
+        </select>
+        <button id="themeBtn" class="theme-btn" data-i18n="theme_btn">🌗 Тема</button>
+        <div class="color-picker-wrapper">
+          <span data-i18n="bg_label">🎨 Фон:</span>
+          <input type="color" id="bgPicker" value="#f8fafc">
+          <button id="resetBgBtn" style="border:none; background:none; cursor:pointer; color:var(--primary); font-weight:bold;" data-i18n="reset_bg">Сброс</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="info-card" style="max-width: 600px; margin: 0 auto;">
+      <h2 data-i18n="acc_title" style="margin-bottom: 20px;">👤 Личный кабинет читателя</h2>
+      <form id="accountForm" onsubmit="saveAccountProfile(event)">
+        <div class="form-group">
+          <label data-i18n="name_label">Ваше имя:</label>
+          <input type="text" id="accName" required placeholder="Введите имя">
+        </div>
+        <div class="form-group">
+          <label data-i18n="phone_label">Ваш телефон:</label>
+          <input type="tel" id="accPhone" required placeholder="+998 ...">
+        </div>
+        <div class="form-group">
+          <label>Город / Shahar / City:</label>
+          <input type="text" id="accCity" required>
+        </div>
+        <button type="submit" class="btn" data-i18n="acc_save">💾 Сохранить профиль</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 BookHaven — Современный книжный магазин.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
